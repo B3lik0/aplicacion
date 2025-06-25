@@ -214,6 +214,11 @@ http://localhost:8080/register
    
     docker compose run --rm artisan config:cache
     docker compose run --rm artisan migrate
+
+   # Validar la longitud de las keys max length por version antigua de mysql
+   /app/Providers/AppServiceProvider.php 
+   
+   Schema::defaultStringLength(191);
    ```
 
 4. **Limpiar caché**
